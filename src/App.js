@@ -42,7 +42,7 @@ class App extends Component{
   selectWinner(){
     const playerOne=this.state.playerOne;
     const playerTwo=this.state.playerTwo;
-    if(playerOne==playerTwo){
+    if(playerOne===playerTwo){
       this.setState({winner:"Oops it a tie!!"}) 
     }
     else if((playerOne===stone&&playerTwo===scissor)||(playerOne===scissor&&playerTwo===paper)||(playerOne===paper)&&(playerTwo===stone))
@@ -63,8 +63,8 @@ class App extends Component{
         <div align="center" className="label text-white"><h1>STONE PAPER SCISSOR</h1></div>
         <div className="container">
           <div className="row row-align">
-              <img src={this.state.playerOne} className="col-12 col-sm-6 img"></img>
-              <img src={this.state.playerTwo} className="col-12 col-sm-6 img"></img>  
+              <img src={this.state.playerOne} className="col-12 col-sm-6 img" alt="stone/paper/scissor"></img>
+              <img src={this.state.playerTwo} className="col-12 col-sm-6 img" alt="stone/paper/scissor"></img>  
            </div>
           <div className="row">
             <button className="item-btn btn btn-dark"  onClick={this.setimg1}>Stone</button>
